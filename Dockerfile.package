@@ -1,0 +1,11 @@
+FROM debian:latest
+#daocloud.io/centos:latest
+#alpine:latest
+MAINTAINER <284077318@qq.com> 
+ADD go/bin/webstatic /usr/bin/webstatic
+
+ADD go/src/github.com/jicg/webstatic/static /app/static
+VOLUME /app/static
+EXPOSE 8081
+WORKDIR /app
+CMD webstatic

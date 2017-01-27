@@ -1,0 +1,15 @@
+version: 2.0
+test:
+build:
+    lite_image:
+        compile:
+            dockerfile_path: Dockerfile
+            build_dir: /
+            cache: true
+        extract:
+            - /go/bin/webstatic
+            - /go/src/github.com/jicg/webstatic/static
+        package:
+            dockerfile_path: Dockerfile.package
+            build_dir: /
+            cache: true

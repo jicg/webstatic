@@ -1,0 +1,9 @@
+webstatic:
+  image: daocloud.io/jicg/webstatic:latest
+  privileged: false
+  restart: always
+  ports:
+  - 8081:8081
+  volumes:
+  - /home/docker/easypos/static:/app/static
+
